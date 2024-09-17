@@ -3,9 +3,6 @@
     background-color: rgb(234, 234, 234);
   }
   
-  body {
-    padding: 60px;
-  }
   
   input {
     background-color: white;
@@ -15,7 +12,9 @@
     font-size: 1.2rem;
     outline: none;
     padding: 10px 15px;
-    width: 100%;
+    width: calc(100% - 60px);
+    margin: 0 30px;
+    box-sizing: border-box;
   }
   
   h2 {
@@ -25,6 +24,7 @@
   h3 {
     font-size: 3rem;
     margin-bottom: 5px;
+    margin: 12px 20px;
   }
   
   .card-grid {
@@ -32,6 +32,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: calc(100% - 60px); 
+    margin: 0 30px;           
+    box-sizing: border-box;   
   }
   
   .card {
@@ -61,3 +64,69 @@
   .card img {
     width: 100%;
   }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header img {
+    height: 50px;
+    background-color: transparent;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #e3e2e9;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gift-grid-container {
+    width: calc(100% - 60px); 
+    margin: 0 30px;          
+    box-sizing: border-box;    
+}
+
+.animated-text {
+    display: inline-block;
+    color: blue; 
+    border-right: 2px solid blue; /* Cursor de máquina de escribir */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Comienza con un ancho de 0 */
+    animation: typing 3s steps(17, end) forwards, blink-caret 0.75s step-end infinite;
+    vertical-align: bottom;
+}
+
+/* Animación de escribir */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16ch; /* Permite que la animación expanda el ancho del texto */
+    }
+}
+
+/* Animación para el efecto de parpadeo del cursor */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: blue;
+    }
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {AddCategory, GiftGrid} from './components/';
+import {AddCategory, GiftGrid, CustomHeader} from './components/';
 
 export const GiftExpertApp = () => {
 
@@ -13,14 +13,20 @@ export const GiftExpertApp = () => {
 
     return (
         <>
-            {/* titulo */}
-            <h1>GiftExpertApp</h1>
+            <CustomHeader />
+
+            <div className="text-center">
+                <h3>
+                    Explore <span className="animated-text">gif search engine</span>
+                </h3>
+            </div>
 
             {/* Input  */}
             <AddCategory 
                 onNewCategory={ (value) => onAddCategory(value)}
                 
             />
+
             {/* listado de gifts */}
             { categories.map( (category) => (
                     <GiftGrid 

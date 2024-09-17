@@ -3,7 +3,7 @@
 This project is a simple and fast GIF search application built with React, powered by Vite for a fast development experience. It allows users to search for animated GIFs through an intuitive and responsive interface, fetching real-time data from an external API. Users can input keywords, and the app will return a list of GIFs matching the search criteria.
 
 ## Features
-- **Real-time GIF search** using Giphy API (or other GIF API of your choice)
+- **Real-time GIF search** using Giphy API 
 - **Responsive design** that works on desktop and mobile devices
 - **Dynamic updates** as users type their search queries
 - **Loading spinner** for a better user experience while fetching results
